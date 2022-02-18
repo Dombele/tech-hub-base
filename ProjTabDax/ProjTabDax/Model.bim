@@ -1,0 +1,1289 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "pt-BR",
+    "dataSources": [
+      {
+        "name": "SqlServer DESKTOP-U0H45R9 DW_SUCOS",
+        "connectionString": "Provider=SQLNCLI11;Data Source=DESKTOP-U0H45R9;Initial Catalog=DW_SUCOS;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateAccount",
+        "account": "Dell",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "__RefactorLog",
+        "columns": [
+          {
+            "name": "OperationKey",
+            "dataType": "string",
+            "sourceColumn": "OperationKey",
+            "sourceProviderType": "Guid"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "__RefactorLog",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[__RefactorLog].* FROM [dbo].[__RefactorLog] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[__RefactorLog].* FROM [dbo].[__RefactorLog] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "__RefactorLog"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_Categoria",
+        "columns": [
+          {
+            "name": "Cod_Categoria",
+            "dataType": "string",
+            "sourceColumn": "Cod_Categoria",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Desc_Categoria",
+            "dataType": "string",
+            "sourceColumn": "Desc_Categoria",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Categoria",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_Categoria].* FROM [dbo].[Dim_Categoria] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_Categoria].* FROM [dbo].[Dim_Categoria] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_Categoria"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_Cliente",
+        "columns": [
+          {
+            "name": "Cod_Cliente",
+            "dataType": "string",
+            "sourceColumn": "Cod_Cliente",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Desc_Cliente",
+            "dataType": "string",
+            "sourceColumn": "Desc_Cliente",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Cidade",
+            "dataType": "string",
+            "sourceColumn": "Cod_Cidade",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Desc_Cidade",
+            "dataType": "string",
+            "sourceColumn": "Desc_Cidade",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Estado",
+            "dataType": "string",
+            "sourceColumn": "Cod_Estado",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Desc_Estado",
+            "dataType": "string",
+            "sourceColumn": "Desc_Estado",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Regiao",
+            "dataType": "string",
+            "sourceColumn": "Cod_Regiao",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Desc_Regiao",
+            "dataType": "string",
+            "sourceColumn": "Desc_Regiao",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Segmento",
+            "dataType": "string",
+            "sourceColumn": "Cod_Segmento",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Desc_Segmento",
+            "dataType": "string",
+            "sourceColumn": "Desc_Segmento",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Cliente",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_Cliente].* FROM [dbo].[Dim_Cliente] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_Cliente].* FROM [dbo].[Dim_Cliente] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_Cliente"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_Fabrica",
+        "columns": [
+          {
+            "name": "Cod_Fabrica",
+            "dataType": "string",
+            "sourceColumn": "Cod_Fabrica",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Desc_Fabrica",
+            "dataType": "string",
+            "sourceColumn": "Desc_Fabrica",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Fabrica",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_Fabrica].* FROM [dbo].[Dim_Fabrica] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_Fabrica].* FROM [dbo].[Dim_Fabrica] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_Fabrica"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_Marca",
+        "columns": [
+          {
+            "name": "Cod_Marca",
+            "dataType": "string",
+            "sourceColumn": "Cod_Marca",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Desc_Marca",
+            "dataType": "string",
+            "sourceColumn": "Desc_Marca",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Categoria",
+            "dataType": "string",
+            "sourceColumn": "Cod_Categoria",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Marca",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_Marca].* FROM [dbo].[Dim_Marca] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_Marca].* FROM [dbo].[Dim_Marca] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_Marca"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_Organizacional",
+        "columns": [
+          {
+            "name": "Cod_Filho",
+            "dataType": "string",
+            "sourceColumn": "Cod_Filho",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Desc_Filho",
+            "dataType": "string",
+            "sourceColumn": "Desc_Filho",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Pai",
+            "dataType": "string",
+            "sourceColumn": "Cod_Pai",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Esquerda",
+            "dataType": "int64",
+            "sourceColumn": "Esquerda",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Direita",
+            "dataType": "int64",
+            "sourceColumn": "Direita",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Nivel",
+            "dataType": "int64",
+            "sourceColumn": "Nivel",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Organizacional",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_Organizacional].* FROM [dbo].[Dim_Organizacional] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_Organizacional].* FROM [dbo].[Dim_Organizacional] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_Organizacional"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_Produto",
+        "columns": [
+          {
+            "name": "Cod_Produto",
+            "dataType": "string",
+            "sourceColumn": "Cod_Produto",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Desc_Produto",
+            "dataType": "string",
+            "sourceColumn": "Desc_Produto",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Atr_Tamanho",
+            "dataType": "string",
+            "sourceColumn": "Atr_Tamanho",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Atr_Sabor",
+            "dataType": "string",
+            "sourceColumn": "Atr_Sabor",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Marca",
+            "dataType": "string",
+            "sourceColumn": "Cod_Marca",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Produto",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_Produto].* FROM [dbo].[Dim_Produto] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_Produto].* FROM [dbo].[Dim_Produto] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_Produto"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Dim_Tempo",
+        "columns": [
+          {
+            "name": "Cod_Dia",
+            "dataType": "string",
+            "sourceColumn": "Cod_Dia",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Data",
+            "dataType": "dateTime",
+            "sourceColumn": "Data",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "Cod_Semana",
+            "dataType": "int64",
+            "sourceColumn": "Cod_Semana",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Nome_Dia_Semana",
+            "dataType": "string",
+            "sourceColumn": "Nome_Dia_Semana",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Mes",
+            "dataType": "int64",
+            "sourceColumn": "Cod_Mes",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Nome_Mes",
+            "dataType": "string",
+            "sourceColumn": "Nome_Mes",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Mes_Ano",
+            "dataType": "string",
+            "sourceColumn": "Cod_Mes_Ano",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Nome_Mes_Ano",
+            "dataType": "string",
+            "sourceColumn": "Nome_Mes_Ano",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Trimestre",
+            "dataType": "int64",
+            "sourceColumn": "Cod_Trimestre",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Nome_Trimestre",
+            "dataType": "string",
+            "sourceColumn": "Nome_Trimestre",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Trimestre_Ano",
+            "dataType": "string",
+            "sourceColumn": "Cod_Trimestre_Ano",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Nome_Trimestre_Ano",
+            "dataType": "string",
+            "sourceColumn": "Nome_Trimestre_Ano",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Semestre",
+            "dataType": "int64",
+            "sourceColumn": "Cod_Semestre",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Nome_Semestre",
+            "dataType": "string",
+            "sourceColumn": "Nome_Semestre",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Semestre_Ano",
+            "dataType": "string",
+            "sourceColumn": "Cod_Semestre_Ano",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Nome_Semestre_Ano",
+            "dataType": "string",
+            "sourceColumn": "Nome_Semestre_Ano",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Ano",
+            "dataType": "string",
+            "sourceColumn": "Ano",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Tipo_Dia",
+            "dataType": "string",
+            "sourceColumn": "Tipo_Dia",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Tempo",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Dim_Tempo].* FROM [dbo].[Dim_Tempo] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Dim_Tempo].* FROM [dbo].[Dim_Tempo] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_Tempo"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Fato_001",
+        "columns": [
+          {
+            "name": "Cod_Cliente",
+            "dataType": "string",
+            "sourceColumn": "Cod_Cliente",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Produto",
+            "dataType": "string",
+            "sourceColumn": "Cod_Produto",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Organizacional",
+            "dataType": "string",
+            "sourceColumn": "Cod_Organizacional",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Fabrica",
+            "dataType": "string",
+            "sourceColumn": "Cod_Fabrica",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Dia",
+            "dataType": "string",
+            "sourceColumn": "Cod_Dia",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Faturamento",
+            "dataType": "double",
+            "sourceColumn": "Faturamento",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Imposto",
+            "dataType": "double",
+            "sourceColumn": "Imposto",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Custo_Variavel",
+            "dataType": "double",
+            "sourceColumn": "Custo_Variavel",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Quantidade_Vendida",
+            "dataType": "double",
+            "sourceColumn": "Quantidade_Vendida",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Unidade_Vendida",
+            "dataType": "double",
+            "sourceColumn": "Unidade_Vendida",
+            "sourceProviderType": "Double"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fato_001",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Fato_001].* FROM [dbo].[Fato_001] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Fato_001].* FROM [dbo].[Fato_001] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Fato_001"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Fato_002",
+        "columns": [
+          {
+            "name": "Cod_Cliente",
+            "dataType": "string",
+            "sourceColumn": "Cod_Cliente",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Produto",
+            "dataType": "string",
+            "sourceColumn": "Cod_Produto",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Fabrica",
+            "dataType": "string",
+            "sourceColumn": "Cod_Fabrica",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Dia",
+            "dataType": "string",
+            "sourceColumn": "Cod_Dia",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Frete",
+            "dataType": "double",
+            "sourceColumn": "Frete",
+            "sourceProviderType": "Double"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fato_002",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Fato_002].* FROM [dbo].[Fato_002] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Fato_002].* FROM [dbo].[Fato_002] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Fato_002"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Fato_003",
+        "columns": [
+          {
+            "name": "Cod_Fabrica",
+            "dataType": "string",
+            "sourceColumn": "Cod_Fabrica",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Dia",
+            "dataType": "string",
+            "sourceColumn": "Cod_Dia",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Custo_Fixo",
+            "dataType": "double",
+            "sourceColumn": "Custo_Fixo",
+            "sourceProviderType": "Double"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fato_003",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Fato_003].* FROM [dbo].[Fato_003] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Fato_003].* FROM [dbo].[Fato_003] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Fato_003"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Fato_004",
+        "columns": [
+          {
+            "name": "Cod_Cliente",
+            "dataType": "string",
+            "sourceColumn": "Cod_Cliente",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Produto",
+            "dataType": "string",
+            "sourceColumn": "Cod_Produto",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Organizacional",
+            "dataType": "string",
+            "sourceColumn": "Cod_Organizacional",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Dia",
+            "dataType": "string",
+            "sourceColumn": "Cod_Dia",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Meta_Faturamento",
+            "dataType": "double",
+            "sourceColumn": "Meta_Faturamento",
+            "sourceProviderType": "Double"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fato_004",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Fato_004].* FROM [dbo].[Fato_004] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Fato_004].* FROM [dbo].[Fato_004] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Fato_004"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Fato_005",
+        "columns": [
+          {
+            "name": "Cod_Produto",
+            "dataType": "string",
+            "sourceColumn": "Cod_Produto",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Fabrica",
+            "dataType": "string",
+            "sourceColumn": "Cod_Fabrica",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Dia",
+            "dataType": "string",
+            "sourceColumn": "Cod_Dia",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Meta_Custo",
+            "dataType": "double",
+            "sourceColumn": "Meta_Custo",
+            "sourceProviderType": "Double"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fato_005",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Fato_005].* FROM [dbo].[Fato_005] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Fato_005].* FROM [dbo].[Fato_005] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Fato_005"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "sysdiagrams",
+        "columns": [
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "principal_id",
+            "dataType": "int64",
+            "sourceColumn": "principal_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "diagram_id",
+            "dataType": "int64",
+            "sourceColumn": "diagram_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "version",
+            "dataType": "int64",
+            "sourceColumn": "version",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "sysdiagrams",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[sysdiagrams].* FROM [dbo].[sysdiagrams] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[sysdiagrams].* FROM [dbo].[sysdiagrams] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "sysdiagrams"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "TEMP_AUXCONTROLE",
+        "columns": [
+          {
+            "name": "ID",
+            "dataType": "string",
+            "sourceColumn": "ID",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CONTADOR",
+            "dataType": "int64",
+            "sourceColumn": "CONTADOR",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "NIVEL",
+            "dataType": "int64",
+            "sourceColumn": "NIVEL",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "TEMP_AUXCONTROLE",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[TEMP_AUXCONTROLE].* FROM [dbo].[TEMP_AUXCONTROLE] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[TEMP_AUXCONTROLE].* FROM [dbo].[TEMP_AUXCONTROLE] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "TEMP_AUXCONTROLE"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "TEMP_AUXTABELA",
+        "columns": [
+          {
+            "name": "ID",
+            "dataType": "string",
+            "sourceColumn": "ID",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "IDPAI",
+            "dataType": "string",
+            "sourceColumn": "IDPAI",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ESQ",
+            "dataType": "int64",
+            "sourceColumn": "ESQ",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "DIR",
+            "dataType": "int64",
+            "sourceColumn": "DIR",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "NIVEL",
+            "dataType": "int64",
+            "sourceColumn": "NIVEL",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "NOME",
+            "dataType": "string",
+            "sourceColumn": "NOME",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "TEMP_AUXTABELA",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[TEMP_AUXTABELA].* FROM [dbo].[TEMP_AUXTABELA] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[TEMP_AUXTABELA].* FROM [dbo].[TEMP_AUXTABELA] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "TEMP_AUXTABELA"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Fato_Completa",
+        "columns": [
+          {
+            "name": "Cod_Cliente",
+            "dataType": "string",
+            "sourceColumn": "Cod_Cliente",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Produto",
+            "dataType": "string",
+            "sourceColumn": "Cod_Produto",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Organizacional",
+            "dataType": "string",
+            "sourceColumn": "Cod_Organizacional",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Fabrica",
+            "dataType": "string",
+            "sourceColumn": "Cod_Fabrica",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cod_Dia",
+            "dataType": "string",
+            "sourceColumn": "Cod_Dia",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Faturamento",
+            "dataType": "double",
+            "sourceColumn": "Faturamento",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Imposto",
+            "dataType": "double",
+            "sourceColumn": "Imposto",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Custo_Variavel",
+            "dataType": "double",
+            "sourceColumn": "Custo_Variavel",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Quantidade_Vendida",
+            "dataType": "double",
+            "sourceColumn": "Quantidade_Vendida",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Unidade_Vendida",
+            "dataType": "double",
+            "sourceColumn": "Unidade_Vendida",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Frete Rateio",
+            "dataType": "double",
+            "sourceColumn": "Frete Rateio",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Custo Fixo Rateio",
+            "dataType": "double",
+            "sourceColumn": "Custo Fixo Rateio",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Meta Faturamento Rateio",
+            "dataType": "double",
+            "sourceColumn": "Meta Faturamento Rateio",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Meta Custo Rateio",
+            "dataType": "double",
+            "sourceColumn": "Meta Custo Rateio",
+            "sourceProviderType": "Double"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fato_Completa",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[Fato_Completa].* FROM [dbo].[Fato_Completa] ",
+              "dataSource": "SqlServer DESKTOP-U0H45R9 DW_SUCOS"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Fato_Completa].* FROM [dbo].[Fato_Completa] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Fato_Completa"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "556474ce-9e4e-4062-9795-d0317db223a3",
+        "fromTable": "Fato_001",
+        "fromColumn": "Cod_Fabrica",
+        "toTable": "Dim_Fabrica",
+        "toColumn": "Cod_Fabrica"
+      },
+      {
+        "name": "57b9b357-0907-4794-984a-ef956b308507",
+        "fromTable": "Fato_001",
+        "fromColumn": "Cod_Organizacional",
+        "toTable": "Dim_Organizacional",
+        "toColumn": "Cod_Filho"
+      },
+      {
+        "name": "8c5ab3f0-d809-4c13-9d51-56aac511a9a3",
+        "fromTable": "Fato_001",
+        "fromColumn": "Cod_Produto",
+        "toTable": "Dim_Produto",
+        "toColumn": "Cod_Produto"
+      },
+      {
+        "name": "2cc93597-980b-42ba-a5e1-9914db01f95d",
+        "fromTable": "Fato_001",
+        "fromColumn": "Cod_Dia",
+        "toTable": "Dim_Tempo",
+        "toColumn": "Cod_Dia"
+      },
+      {
+        "name": "675b2ccb-2148-4b46-8c2a-5742e724d8a1",
+        "fromTable": "Fato_002",
+        "fromColumn": "Cod_Cliente",
+        "toTable": "Dim_Cliente",
+        "toColumn": "Cod_Cliente"
+      },
+      {
+        "name": "e7c2fc7b-77f4-47d7-b9bd-eb5919693046",
+        "fromTable": "Fato_002",
+        "fromColumn": "Cod_Produto",
+        "toTable": "Dim_Produto",
+        "toColumn": "Cod_Produto"
+      },
+      {
+        "name": "ba2b0eac-8da3-47e7-ba17-096a2a33f7c3",
+        "fromTable": "Fato_002",
+        "fromColumn": "Cod_Dia",
+        "toTable": "Dim_Tempo",
+        "toColumn": "Cod_Dia"
+      },
+      {
+        "name": "0a61a93a-7a1e-4b49-9db7-feb2bcba6ace",
+        "fromTable": "Fato_003",
+        "fromColumn": "Cod_Fabrica",
+        "toTable": "Dim_Fabrica",
+        "toColumn": "Cod_Fabrica"
+      },
+      {
+        "name": "5a85f28d-e58e-49e4-b185-27e9e0a0c3f7",
+        "fromTable": "Fato_003",
+        "fromColumn": "Cod_Dia",
+        "toTable": "Dim_Tempo",
+        "toColumn": "Cod_Dia"
+      },
+      {
+        "name": "a52aba31-9ed1-4cd9-86cf-f76679bcbf0c",
+        "fromTable": "Fato_004",
+        "fromColumn": "Cod_Cliente",
+        "toTable": "Dim_Cliente",
+        "toColumn": "Cod_Cliente"
+      },
+      {
+        "name": "0955bcc1-b652-44b0-8213-8b11c9348566",
+        "fromTable": "Fato_004",
+        "fromColumn": "Cod_Produto",
+        "toTable": "Dim_Produto",
+        "toColumn": "Cod_Produto"
+      },
+      {
+        "name": "18647510-ad9a-45b6-91aa-bc0c228f3341",
+        "fromTable": "Fato_004",
+        "fromColumn": "Cod_Dia",
+        "toTable": "Dim_Tempo",
+        "toColumn": "Cod_Dia"
+      },
+      {
+        "name": "5143a498-d63a-44e8-8dfc-cffed08b141b",
+        "fromTable": "Fato_005",
+        "fromColumn": "Cod_Fabrica",
+        "toTable": "Dim_Fabrica",
+        "toColumn": "Cod_Fabrica"
+      },
+      {
+        "name": "13c4db31-0b4e-4dc0-8819-c2906af0c0ae",
+        "fromTable": "Fato_005",
+        "fromColumn": "Cod_Produto",
+        "toTable": "Dim_Produto",
+        "toColumn": "Cod_Produto"
+      },
+      {
+        "name": "e3f9f8b4-0cfc-4f45-9597-09d2e355fa7e",
+        "fromTable": "Fato_005",
+        "fromColumn": "Cod_Dia",
+        "toTable": "Dim_Tempo",
+        "toColumn": "Cod_Dia"
+      },
+      {
+        "name": "3e6bb9f6-f617-4c79-a4af-c2b3f6479567",
+        "fromTable": "Dim_Marca",
+        "fromColumn": "Cod_Categoria",
+        "toTable": "Dim_Categoria",
+        "toColumn": "Cod_Categoria"
+      },
+      {
+        "name": "4d72a8a1-6b77-452b-8199-204d179b4a39",
+        "fromTable": "Dim_Produto",
+        "fromColumn": "Cod_Marca",
+        "toTable": "Dim_Marca",
+        "toColumn": "Cod_Marca"
+      },
+      {
+        "name": "a21ba429-fede-4b1c-b569-04e99eb40422",
+        "fromTable": "Fato_001",
+        "fromColumn": "Cod_Cliente",
+        "toTable": "Dim_Cliente",
+        "toColumn": "Cod_Cliente"
+      },
+      {
+        "name": "5bf91a15-76a6-44bb-a530-b9e2183b6877",
+        "fromTable": "Fato_002",
+        "fromColumn": "Cod_Fabrica",
+        "toTable": "Dim_Fabrica",
+        "toColumn": "Cod_Fabrica"
+      },
+      {
+        "name": "90870fc3-c300-40b6-a701-49fef3d13ba7",
+        "fromTable": "Fato_004",
+        "fromColumn": "Cod_Organizacional",
+        "toTable": "Dim_Organizacional",
+        "toColumn": "Cod_Filho"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
